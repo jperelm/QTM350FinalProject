@@ -7,10 +7,12 @@ As movie consumers, we tend to differ to the experts when it comes to reviews. W
 Amazon Comprehend is natural-language processing (NLP) service in Amazon Web Services (AWS) used to discover information in unstructured data. Comprehend uses machine learning to reveal unseen data, as opposed to the tedious task of manually sifting through documents. The service detects identifiable elements in the data, such as references to places, events, or people, and files can be categorized by topic prior to analysis. Even after locating any personally identifiable information, Comprehend masks and redacts this information to ensure security. It is fully managed in AWS, so there is no need create models. 
 Comprehend receives a text file and sifts through words and phrases to analyze the author’s intentions. The service provides Amazon’s Keyphrase Extraction, Sentiment Analysis, Entity Recognition, Topic Modeling, and Language Detection APIs, which can all be run from the user’s application. Just call the API with the source document’s location, and the APIs will output sentiment, key words, and entities. For example, we used the Sentiment Analysis API, DetectSentiment in our analysis of reviews, which returns the overall sentiment of the text input. After analyzing key phrases in the text, this API identifies the overall sentiment, along with its corresponding confidence score. In the example below, we see an overall sentiment of neutral for the text input. This is a correct interpretation of the text, as the author (us) did not take a firm stance on this movie. The overall sentiment is returned from the confidence scores below it, which tell us how confidence Comprehend is in each sentiment. Here, confidence was split across the board, but neutral has the highest at 53.47%.
 
-![](images/pic.jpg)
+![](images/pic1.jpg)
  
 
 In addition, as seen below, the Keyphrase Extraction API analyzes the text to detect key phrases that reveal important information about the movie and the author’s feelings. Along with each phrase, the API outputs a confidence score which reflects the API’s confidence that the given phrase is important to analyzing the text.
+
+![](images/pic2.tif)
  
 This particular API was not used in our analysis of movie reviews but is an interesting example of Comprehend’s abilities. Not only is Comprehend able to extract individual words, but it can also detect phrases, such as “A true work” above.
 
