@@ -10,7 +10,6 @@ In this project, we will collect written movie reviews, perform sentiment analys
 #### 1. [Set Up an AWS Account and Create an Administrator User](https://docs.aws.amazon.com/comprehend/latest/dg/setting-up.html) 
 #### 2. [Store data in S3 bucket in AWS](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-buckets-s3.html)
 #### 3. [Process Movie reivews uisng AWS Comprehend](https://docs.aws.amazon.com/comprehend/latest/dg/getting-started.html)
-        We can process the data to extract key phrasesand sentiment for later analysis. 
 #### 4. [Analyze and Dipslay data using python (boto3)](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
 
 Overall, we found the [developer guide](https://docs.aws.amazon.com/comprehend/latest/dg/comprehend-dg.pdf) incredibly helpful for working with Amazon Comprehend.
