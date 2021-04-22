@@ -1,4 +1,4 @@
-# QTM350FinalProject
+# QTM350 Final Project
 This is our team's work for the final project for QTM 350 (Spring '21)
 
 By: Laura Neff, Jason Hamilton, Jason Perelman, and Chris Nicholson
