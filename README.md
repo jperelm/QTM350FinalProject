@@ -10,14 +10,22 @@ In this project, we will collect written movie reviews, perform sentiment analys
 #### 1. [Set Up an AWS Account](https://docs.aws.amazon.com/comprehend/latest/dg/setting-up.html)
 #### 2. [Create a SageMaker Notebook Instance](https://docs.aws.amazon.com/sagemaker/latest/dg/howitworks-create-ws.html)
 #### 3. Grant Permissions to SageMaker to Access Amazon Comprehend and S3
-After creating a SageMaker notebook, first, navigate to the AWS Management Console and click on IAM to open the IAM dashboard.
+After creating a SageMaker notebook, first, navigate to the AWS Management Console and click on IAM to open the IAM dashboard:
+
 ![aws console](https://github.com/jperelm/QTM350FinalProject/blob/main/screenshots/awsconsole.png)
-Next, from the IAM dashboard, click on "Roles".
+
+Next, from the IAM dashboard, click on "Roles":
+
 ![iam dash](https://github.com/jperelm/QTM350FinalProject/blob/main/screenshots/iamdash.png)
-From the IAM roles page, click on the IAM role which matches the one which you used when setting up the SageMaker notebook. 
+
+From the IAM roles page, click on the IAM role which matches the one which you used when setting up the SageMaker notebook:
+
 ![iam roles](https://github.com/jperelm/QTM350FinalProject/blob/main/screenshots/iamroles.png)
-After clicking on the SageMaker IAM role, you will see a tab for "Permissions" which allows you to assign specific resources you allow the SageMaker notebook instance to access on AWS. Add the "AmazonS3FullAccess", "ComprehendFullAccess", and "AmazonSageMakerFullAccess" permissions (if not already added) to this IAM role by clicking on the "Attach policies" button and searching for the name of the specific permission.
+
+After clicking on the SageMaker IAM role, you will see a tab for "Permissions" which allows you to assign specific resources you allow the SageMaker notebook instance to access on AWS. Add the "AmazonS3FullAccess", "ComprehendFullAccess", and "AmazonSageMakerFullAccess" permissions (if not already added) to this IAM role by clicking on the "Attach policies" button and searching for the name of the specific permission:
+
 ![sagemaker permissions](https://github.com/jperelm/QTM350FinalProject/blob/main/screenshots/sagemakerperms.png)
+
 #### 4. Clone this repository in SageMaker
 First, open a SageMaker notebook instance in AWS. You can either create a new terminal window and paste the following commands:
 
