@@ -7,9 +7,25 @@ In this project, we will collect written movie reviews, perform sentiment analys
 
 ### Steps to replicate analysis with AWS
 
-#### 1. [Set Up an AWS Account and Create an Administrator User](https://docs.aws.amazon.com/comprehend/latest/dg/setting-up.html) 
-#### 2. [Store data in S3 bucket in AWS](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-buckets-s3.html)
-#### 3. [Process Movie reivews uisng AWS Comprehend](https://docs.aws.amazon.com/comprehend/latest/dg/getting-started.html)
-#### 4. [Analyze and Dipslay data using python (boto3)](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
+#### 1. [Set Up an AWS Account](https://docs.aws.amazon.com/comprehend/latest/dg/setting-up.html)
+#### 2. [Create a SageMaker Notebook Instance](https://docs.aws.amazon.com/sagemaker/latest/dg/howitworks-create-ws.html)
+#### 3. Grant Permissions to SageMaker to Access Amazon Comprehend and S3
+After creating a SageMaker notebook, first, navigate to the AWS Management Console and click on IAM to open the IAM dashboard.
+![aws console](https://github.com/jperelm/QTM350FinalProject/blob/main/screenshots/awsconsole.png)
+Next, from the IAM dashboard, click on "Roles".
+![iam dash](https://github.com/jperelm/QTM350FinalProject/blob/main/screenshots/iamdash.png)
+From the IAM roles page, click on the IAM role which matches the one which you used when setting up the SageMaker notebook. 
+![iam roles](https://github.com/jperelm/QTM350FinalProject/blob/main/screenshots/iamroles.png)
+After clicking on the SageMaker IAM role, you will see a tab for "Permissions" which allows you to assign specific resources you allow the SageMaker notebook instance to access on AWS. Add the "AmazonS3FullAccess", "ComprehendFullAccess", and "AmazonSageMakerFullAccess" permissions (if not already added) to this IAM role by clicking on the "Attach policies" button and searching for the name of the specific permission.
+![sagemaker permissions](https://github.com/jperelm/QTM350FinalProject/blob/main/screenshots/sagemakerperms.png)
+#### 4. Clone this repository in SageMaker
+First, open a SageMaker notebook instance in AWS. You can either create a new terminal window and paste the following commands:
 
-Overall, we found the [developer guide](https://docs.aws.amazon.com/comprehend/latest/dg/comprehend-dg.pdf) incredibly helpful for working with Amazon Comprehend.
+<pre>cd /root/  
+git clone git@github.com:jperelm/QTM350FinalProject.git</pre>
+
+Alternatively, you may download the zip file of the master branch of this repository to your local machine and upload it via JupyterLab, by clicking on the upload button (highlighted below) in your SageMaker notebook instance:
+
+![sagemaker upload](https://github.com/jperelm/QTM350FinalProject/blob/main/screenshots/empty_notebook.png) 
+
+Overall, we found the [developer guide](https://docs.aws.amazon.com/comprehend/latest/dg/comprehend-dg.pdf) incredibly helpful for working with Amazon Comprehend in SageMaker notebooks.
